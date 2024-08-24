@@ -1,0 +1,235 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f0f0f0;
+    color: #333; 
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #EB0056;
+    color: white; 
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+h2{
+    color: #333;
+}
+
+h3.info-subtitle{
+    color: #333;
+}
+
+p.info-detail, 
+p.info-description {
+    color: #333;
+}
+
+li{
+    color: #333;
+}
+
+p.info-advantage,
+p.info-disadvantage{
+    color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#siteTitle {
+    font-size: 24px;
+    margin: 0;
+}
+
+#nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #b3f2ff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: #ffd6d6; 
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-link:focus {
+    color: #ff9999;
+    outline: none;
+    box-shadow: none;
+}
+
+main {
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(580px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#cesarImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#morseImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.info-link {
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.info-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: #ffffff;
+    background-color: rgba(235, 0, 86, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-link:hover .info-section {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.info-link:hover .overlay {
+    opacity: 1; 
+}
+
+footer {
+    background-color: #EB0056;
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: auto;
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-media a {
+    color: #fff; 
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EB0056; 
+    border-radius: 10px;
+    border: 3px solid #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #EB0056; 
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #EB0056;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 15px #000000;
+    z-index: 9999;
+    transition: background-color 0.2s ease-out;
+}
